@@ -5,15 +5,15 @@ import sendEmail from '@salesforce/apex/newLWCController.sendEmail';
 export default class NewLWC extends LightningElement {
 
 
-   toAddress; //pretty much same as String myString = new String();
-   subject;
-   body;
-
+    toAddress; //pretty much same as String myString = new String();
+    subject;
+    body;
+    test;
    
     //public static void handleSendButtonClick() } // }
-   handleSendButtonClick() {
+    handleSendButtonClick() {
         sendEmail({
-            toAddress : this.toAddress,
+        toAddress : this.toAddress,
             subject : this.subject,
             body : this.body
         }).then(result => {
